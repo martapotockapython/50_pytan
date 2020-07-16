@@ -20,5 +20,5 @@ for liczba in A:               # O(N) # dla liczby w liście A
 print(najwieksza - najmniejsza)       # wydrukuj różnicę między zmienną największa a najmniejsza
 
 # 3
-print(max(A) - min(B))         # O(N) # max(A) - funkcja znajdująca największą wartość listy A
+print(max(A) - min(A))         # O(N) # max(A) - funkcja znajdująca największą wartość listy A
                                       # min(A) - funkcja znajdująca najmniejszą wartość listy A
