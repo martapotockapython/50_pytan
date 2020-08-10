@@ -1,4 +1,4 @@
-# Pytanie 28
+# Pytanie 27
 # Objętość graniastosłupa oblicza się na podstawie wzoru: V = a * b * h
 # a i b to długości boków jego podstawy, a h to wysokość.
 # Poniższy kod znajduje największy graniastosłup jaki możemy utworzyć
