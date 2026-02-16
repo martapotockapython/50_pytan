@@ -1,3 +1,6 @@
+# Czym jest match-case w Pythonie?
+# Czym różni się od switch/case z innych języków?
+
 # podstawowa składnia match-case
 def handle_command(command):
     match command:
