@@ -1,3 +1,5 @@
+# Jakie ograniczenia f-stringów zostały usunięte w Pythonie 3.12?
+
 # przypomnienie podstaw f-stringów
 name = "Marta"
 role = "developer"
