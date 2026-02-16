@@ -1,19 +1,51 @@
 # Do czego służy i jak działa walrus operator
 # :=
 
-# text = "przykładowy tekst"
-# if (length := len(text)) > 10:
-#     print(f"Długość tekstu to {length}")
+# if bez walrusa 
+text = "To jest jakiś przykładowy tekst"
+length = len(text)
+if length > 10:
+    print(f"Tekst ma {length} znaków")
 
 
-# while (line := input("Podaj komendę (q dla wyjścia): ")) != 'q':
-#     print(f"Wykonuję: {line}")
+# if z walrusem 
+text = "To jest jakiś przykładowy tekst"
+if (length := len(text)) > 10:
+    print(f"Tekst ma {length} znaków")
 
+
+# błąd bez nawiasów 
+text = "To jest jakiś przykładowy tekst"
+if length := len(text) > 10:
+    print(f"Wartość length: {length}")
+    # length = True (!)
+
+
+# pętla while bez walrusa 
+line = input("Podaj komendę (quit aby zakończyć): ")
+while line != "quit":
+    print(f"Wykonuję: {line}")
+    line = input("Podaj komendę (quit aby zakończyć): ")
+
+
+# pętla while z walrusem
+while (line := input("Podaj komendę (quit aby zakończyć): ")) != "quit":
+    print(f"Wykonuję: {line}")
+
+
+# list comprehension bez walrusa
 def process(x):
-    # czasochłonna funkcja
+    """Symulacja kosztownej operacji."""
+    print(f"  Przetwarzam {x}...")
     return x ** 2 + x
 
-numbers = range(11)
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-results = [processed for n in numbers if (processed := process(n)) > 20]
-print(results)
+# Funkcja wywołana DWA RAZY na element!
+results = [process(n) for n in numbers if process(n) > 20]
+print(f"Wyniki: {results}")
+
+
+# list comprehension z walrusem
+results = [value for n in numbers if (value := process(n)) > 20]
+print(f"Wyniki: {results}")
